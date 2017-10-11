@@ -1,0 +1,113 @@
+object Form2: TForm2
+  Left = 337
+  Top = 193
+  ClientHeight = 117
+  ClientWidth = 426
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 24
+    Top = 8
+    Width = 63
+    Height = 19
+    Caption = #1055#1088#1086#1076#1091#1082#1090
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 152
+    Top = 0
+    Width = 81
+    Height = 19
+    Caption = #1062#1110#1085#1072' '#1079#1072' '#1096#1090
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 248
+    Top = 8
+    Width = 70
+    Height = 19
+    Caption = #1050#1110#1083#1100#1082#1110#1089#1090#1100
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+  end
+  object DBComboBoxEh1: TDBComboBoxEh
+    Left = 24
+    Top = 24
+    Width = 121
+    Height = 21
+    DataField = 'Produkt'
+    DataSource = Form1.DataSource2
+    DynProps = <>
+    EditButtons = <>
+    TabOrder = 1
+    Visible = True
+  end
+  object DBEditEh1: TDBEditEh
+    Left = 152
+    Top = 24
+    Width = 81
+    Height = 21
+    DataField = 'Cena_prod'
+    DataSource = Form1.DataSource2
+    DynProps = <>
+    EditButtons = <>
+    TabOrder = 2
+    Visible = True
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 16
+    Top = 56
+    Width = 215
+    Height = 33
+    DataSource = Form1.DataSource2
+    VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+    TabOrder = 3
+  end
+  object DBComboBoxEh2: TDBComboBoxEh
+    Left = 248
+    Top = 24
+    Width = 121
+    Height = 21
+    DataField = 'Col_produkt'
+    DataSource = Form1.DataSource2
+    DynProps = <>
+    EditButtons = <>
+    Items.Strings = (
+      '1')
+    TabOrder = 0
+    Visible = True
+  end
+  object ADOQuery1: TADOQuery
+    Active = True
+    Connection = Form1.ADOConnection1
+    CursorType = ctStatic
+    DataSource = Form1.DataSource2
+    Parameters = <>
+    SQL.Strings = (
+      'Select * from Ingredienty')
+    Left = 272
+    Top = 64
+  end
+end
